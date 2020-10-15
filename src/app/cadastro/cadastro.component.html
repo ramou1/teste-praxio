@@ -1,0 +1,120 @@
+<div class="container">
+
+    <!-- <div class="jumbotron col-lg-6 mx-auto dark shadow"> -->
+
+    <div class="row align-items-center">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+            <h1>Cadastrar</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-4">
+
+            <form>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="nome" class="form-title-label">Informações Pessoais</label>
+                        <input type="text" [(ngModel)]="cliente.nome" name="nome" class="form-control" id="nome"
+                            placeholder="Nome/Razão Social" value="" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" [(ngModel)]="cliente.cpf" name="cpf" class="form-control" id="cpf"
+                            placeholder="CPF" value="" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <input type="number" [(ngModel)]="cliente.telefone" name="telefone" class="form-control" id="telefone"
+                            placeholder="Telefone" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <input type="email" [(ngModel)]="cliente.email" name="email" class="form-control" id="email"
+                            aria-describedby="emailHelp" placeholder="E-mail" required>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <input type="password" [(ngModel)]="cliente.senha" name="senha" class="form-control" id="senha"
+                            placeholder="Senha" required>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="col-md-4">
+            <form>
+
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="cep" class="form-title-label">Endereço</label>
+                        <input type="text" [(ngModel)]="cliente.cidade" name="cidade" class="form-control" id="cidade"
+                            placeholder="Cidade" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-8 mb-3">
+                        <input type="text" [(ngModel)]="cliente.logradouro" name="logradouro" class="form-control"
+                            id="Logradouro" placeholder="Logradouro" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="numero" [(ngModel)]="cliente.numero" name="numero" class="form-control" id="numero"
+                            placeholder="Número" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-8 mb-3">
+                        <input type="text" [(ngModel)]="cliente.bairro" name="bairro" class="form-control" id="bairro"
+                            placeholder="Bairro" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text" [(ngModel)]="cliente.cep" name="cep" class="form-control" id="cep"
+                            placeholder="CEP" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <input type="text" [(ngModel)]="cliente.complemento" name="complemento" class="form-control"
+                            id="complemento" placeholder="Complemento" required>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4">
+            <div class="text-center"><button class="btn btn-lg btn-primary btn-block" type="submit"
+                    (click)="cadastrar()">Cadastrar</button></div>
+            <br>
+            <a [routerLink]="['/login']" class="btn-link">Já tem uma conta? Faça login</a>
+        </div>
+
+        <div class="col-md-4"></div>
+    </div>
+    <!-- </div> -->
+
+</div>

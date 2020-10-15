@@ -1,0 +1,42 @@
+<div class="container mx-auto">
+
+    <!-- <div class="jumbotron col-lg-4 mx-auto dark shadow"> -->
+
+    <div class="row align-items-center">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4">
+
+            <h1>Entrar</h1>
+            <form>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <!-- [(ngModel)]="user.email" -->
+                        <input type="email"  name="email" class="form-control" id="email"
+                            placeholder="E-mail" required>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <!-- [(ngModel)]="user.senha" -->
+                        <input type="password"  name="senha" class="form-control" id="senha"
+                            placeholder="Senha" required>
+                        <span class="forgot">Esqueceu a senha?</span>
+                    </div>
+                    
+                </div>
+            </form>
+
+            <div class="text-center">
+                <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="logIn()">Entrar</button>
+                <br>
+                <a [routerLink]="['/cadastro']" class="btn-link">Não tem uma conta? Cadastre-se</a>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="col-md-4"></div>
+
+    <!-- </div> -->
+
+</div>
