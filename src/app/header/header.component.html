@@ -1,4 +1,27 @@
- <nav class="navbar navbar-expand-md">
+<div class="container-fluid bg">
+
+  <div class="row align-items-center text-center">
+    <div class="col-md-3">
+      <a class="navbar-brand" [routerLink]="['/']">
+        <img src="..\assets\imgs\front-test-logo.svg" class="card-img-top">
+      </a>
+    </div>
+
+    <div class="col-md-6">
+    </div>
+
+    <div class="col-md-3">
+      <button class="btn btn-primary btn-logout" type="submit" (click)="logout()">
+        Logout
+      </button>
+      <!-- <a class="nav-link" [routerLink]="['/radio']">Logout</a> -->
+    </div>
+  </div>
+
+</div>
+
+
+<!-- <nav class="navbar navbar-expand-md">
   <a class="navbar-brand" [routerLink]="['/']">
     <img src="..\assets\imgs\front-test-logo.svg" class="card-img-top">
   </a>
@@ -10,8 +33,7 @@
       <button class="btn btn-primary btn-logout" type="submit" (click)="logout()">
         Logout
       </button>
-    </div>
-        <!-- <a class="nav-link" [routerLink]="['/radio']">Logout</a> -->
+    </div> 
   </div>
   
-</nav>
+</nav> -->

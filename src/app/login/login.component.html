@@ -1,6 +1,12 @@
-<div class="container mx-auto">
+<div class="container-fluid mx-auto">
 
-    <!-- <div class="jumbotron col-lg-4 mx-auto dark shadow"> -->
+    <div class="row align-items-center text-center">
+        <div class="col-md-3">
+            <a class="navbar-brand" [routerLink]="['/']">
+                <img src="..\assets\imgs\front-test-logo.svg" class="card-img-top">
+            </a>
+        </div>
+    </div>
 
     <div class="row align-items-center">
         <div class="col-md-4"></div>
@@ -17,9 +23,9 @@
                     <div class="col-md-12 mb-3">
                         <input type="password" [(ngModel)]="user.senha" name="senha" class="form-control" id="senha"
                             placeholder="Senha" required>
-                        <span class="forgot">Esqueceu a senha?</span>
+                        <a class="forgot">Esqueceu a senha?</a>
                     </div>
-                    
+
                 </div>
             </form>
 
@@ -28,7 +34,7 @@
                 <br>
                 <a [routerLink]="['/cadastro']" class="btn-link">Não tem uma conta? Cadastre-se</a>
             </div>
-            
+
         </div>
 
     </div>

@@ -1,5 +1,29 @@
 .bg {
-    background: red;
     background-image: url("src/assets/imgs/bg-front.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: 950px;
+    height: 100vh;
+}
 
+.img-logo {
+    margin-top: 30vh;
+}
+
+.btn-saiba-mais {
+    margin-top: 3vh;
+    background-color: transparent !important;
+    border-width: 2px;
+    border-color: #fff !important; 
+    padding: 8px 60px;
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 30px;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #fff !important;
+    color: #7626FF;
+    font-weight: 600;
 }

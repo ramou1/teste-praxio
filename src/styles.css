@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 .jumbotron {
-    background: #fff;
+    /* background: transparent; */
     border-radius: 20px;
     padding: 1rem 3rem;
 }
@@ -19,6 +19,14 @@ h1 {
     margin: 7vh 0;
     font-size: 2rem;
     font-weight: 700;
+}
+
+h3 {
+    margin-top: 3vh;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: #fff;
 }
 
 a.btn-link {
@@ -51,4 +59,6 @@ a.footer-link:hover {
     font-size: 1rem;
     font-weight: 500;
     border-radius: 30px;
+    padding: 1.8vh;
+    margin-top: 3vh;
 }
