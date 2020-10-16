@@ -1,20 +1,17 @@
-<!-- <div class="container"> -->
-    <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" [routerLink]="['/']">
-          <img src="..\assets\imgs\front-test-logo.svg" class="card-img-top">
-        </a>
-    
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-auto">    
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link" [routerLink]="['/radio']">Logout</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    <!-- </div> -->
+ <nav class="navbar navbar-expand-md">
+  <a class="navbar-brand" [routerLink]="['/']">
+    <img src="..\assets\imgs\front-test-logo.svg" class="card-img-top">
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto"></ul>
+
+    <div class="text-center">
+      <button class="btn btn-primary btn-logout" type="submit" (click)="logout()">
+        Logout
+      </button>
+    </div>
+        <!-- <a class="nav-link" [routerLink]="['/radio']">Logout</a> -->
+  </div>
+  
+</nav>

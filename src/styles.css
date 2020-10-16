@@ -10,13 +10,15 @@
 body {
     font-family: 'Mukta';
     font-size: 0.8rem;
+    color: #585859;
 }
 
 h1 {
-    margin-top: 10vh;
+    /* margin-top: 7vh;
+    margin-bottom: 7vh; */
+    margin: 7vh 0;
     font-size: 2rem;
     font-weight: 700;
-    color: #585859;
 }
 
 a.btn-link {
@@ -24,12 +26,26 @@ a.btn-link {
     font-weight: 600;
 }
 
+a.footer-link {
+    color: #585859;
+    font-weight: 600;
+}
+
+a.footer-link:hover {
+    color: #000;
+}
+
+/* closing global font edit */
+
+/* customizing form */
 .form-control {
     font-size: 0.8rem;
 }
-/* closing global font edit */
 
-.btn {
+::-webkit-input-placeholder { color: #CAD0DC !important; }
+/* closing customizing form */
+
+.btn-roxo {
     background-color: #7626FF !important;
     border-color: #7626FF !important;
     font-size: 1rem;

@@ -40,8 +40,8 @@
                     <div class="col-md-12 mb-3">
                         <input type="email" [(ngModel)]="cliente.email" name="email" class="form-control" id="email"
                             aria-describedby="emailHelp" placeholder="E-mail" required>
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
                     </div>
                 </div>
 
@@ -107,7 +107,7 @@
         <div class="col-md-4"></div>
 
         <div class="col-md-4">
-            <div class="text-center"><button class="btn btn-lg btn-primary btn-block" type="submit"
+            <div class="text-center"><button class="btn btn-roxo btn-primary btn-block" type="submit"
                     (click)="cadastrar()">Cadastrar</button></div>
             <br>
             <a [routerLink]="['/login']" class="btn-link">Já tem uma conta? Faça login</a>

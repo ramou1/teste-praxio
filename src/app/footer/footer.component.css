@@ -1,0 +1,9 @@
+.container-fluid {
+    padding: 80px 0 !important;
+    background-image: url("src/assets/imgs/bg-front.png");
+    /* background-position: right; */
+    background-position-x: 900px;
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-position-y: inherit;
+}

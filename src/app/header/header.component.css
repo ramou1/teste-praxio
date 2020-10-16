@@ -27,3 +27,19 @@ a.nav-link:hover {
     border: 0;
     border-radius: 5rem;
 }
+
+.btn-logout {
+    background-color: transparent !important;
+    border-width: 2px;
+    border-color: #EAEAEC !important; 
+    padding: 8px 35px;
+    color: #585859;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.btn-logout:hover {
+    background-color: #EAEAEC !important;
+    color: #fff;
+}
