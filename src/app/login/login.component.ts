@@ -8,7 +8,7 @@ import { ApiService } from '../api.service';
 })
 export class LoginComponent implements OnInit {
 
-  user: any = { email: '', senha: '' };
+  usuario: any = { email: '', senha: '' };
 
   constructor(public api: ApiService) { }
 
@@ -16,7 +16,11 @@ export class LoginComponent implements OnInit {
   }
 
   logIn() {
-    
+    this.api.login(this.usuario);
   }
+
+  // listar() {
+  //   this.api.listar().subscribe(dados => this.usuarios = dados);
+  // }
 
 }

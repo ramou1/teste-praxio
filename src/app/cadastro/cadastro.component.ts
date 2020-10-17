@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -7,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  cliente: any = [{ nome: '', identityId: '', email: '', senha: '', telefone: '', bairro: '', numero: '', complemento: '', cidade: '', logradouro: '', cep: '' }];
+  cliente: any = [{ nome: '', cpf: '', telefone: '', email: '', senha: '', cidade: '', logradouro: '', numero: '', bairro: '', cep: '', complemento: '' }];
 
-  constructor() { }
+  constructor(public api: ApiService) { }
 
   ngOnInit(): void {
   }
 
   cadastrar() {
-    
+    this.api.cadastrarUsuario(this.cliente);
   }
 
 }

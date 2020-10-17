@@ -27,3 +27,7 @@
     color: #7626FF;
     font-weight: 600;
 }
+
+.card-meio {
+    z-index: 1000;
+}
