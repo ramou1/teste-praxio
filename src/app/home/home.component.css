@@ -7,6 +7,16 @@
     height: 100vh;
 }
 
+.card {
+    border: none;
+}
+
+.card-title {
+    color: #733FFF;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 .img-logo {
     margin-top: 30vh;
 }
