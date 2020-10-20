@@ -11,7 +11,7 @@ export class ApiService {
 
   headers: any = {
   //   'Access-Control-Allow-Credentials': 'true',
-    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': 'http://localhost:4200/',
   //   'Accept': 'application/json',
 
     // 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
@@ -43,12 +43,12 @@ export class ApiService {
 
   cadastrarUsuario(data): Observable<any> {
     console.log("dados: ", data);
-    return this.http.post(`${this.API_URL}/api/Usuario`, data);
+    return this.http.post(`${this.API_URL}/api/Usuario`, data, this.options);
   }
 
   login(data): Observable<any> {
     console.log("dados: ", data);
-    return this.http.post(`${this.API_URL}/api/Authorization/RequestToken`, data);
+    return this.http.post(`${this.API_URL}/api/Authorization/RequestToken`, data, this.options);
   }
 
   
