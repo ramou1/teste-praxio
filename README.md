@@ -3,19 +3,13 @@
 Desenvolvido na versão 10.0.4 do Angular.
 
 ## Finalizados
-:heavy_check_mark:
-:heavy_check_mark:
-:heavy_check_mark:
-:heavy_check_mark:
+:heavy_check_mark: O uso do framework Angular 2+ é obrigatório
+:heavy_check_mark: O layout deve ser implementado de acordo com as especificações do Spec
+:heavy_check_mark: É obrigatório o uso de rotas
+:heavy_check_mark: A validação do campo e-mail é obrigatória
+:heavy_check_mark: Todos os campos do cadastro serão obrigatórios
+:heavy_check_mark: A aplicação deve funcionar nos navegadores mais recentes do mercado
 
 ## Não Finalizados
-:x:
-:x:
-
-## :pushpin: Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## :pushpin: Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+:x: O uso de máscaras nos campos CEP, Telefone, CPF é obrigatório
+:x: Uso da API
