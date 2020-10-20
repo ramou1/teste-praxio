@@ -1,0 +1,166 @@
+<div class="container-fluid mx-auto">
+
+    <div class="row align-items-center text-center">
+        <div class="col-md-3">
+            <a class="navbar-brand" [routerLink]="['/']">
+                <img src="..\assets\imgs\front-test-logo.svg" class="card-img-top">
+            </a>
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-4">
+            <h1>Cadastrar</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3"></div>
+
+        <form ngNoForm [formGroup]="form" (ngSubmit)="cadastrar()">
+        <div class="col-md-6">
+
+            <!-- aqui começava o primeiro form <form> -->
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="nome" class="form-title-label">Informações Pessoais</label>
+                        <!-- <input type="text" [(ngModel)]="cliente.nome" name="nome" class="form-control" id="nome"
+                            placeholder="Nome/Razão Social" value="" required> -->
+
+                        <input type="text" placeholder="Nome/Razão Social" formControlName="nome" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nome.errors }" />
+                            <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
+                                <div *ngIf="f.nome.errors.required">Digite um nome/razão social</div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <!-- <input type="text" [(ngModel)]="cliente.cpf" name="cpf" class="form-control" id="cpf"
+                            placeholder="CPF" value="" required> -->
+                        <input type="text" placeholder="CPF" formControlName="cpf" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.cpf.errors }" />
+                        <div *ngIf="submitted && f.cpf.errors" class="invalid-feedback">
+                            <div *ngIf="f.cpf.errors.required">Insira um CPF válido</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <!-- <input type="number" [(ngModel)]="cliente.telefone" name="telefone" class="form-control" id="telefone"
+                            placeholder="Telefone" required> -->
+                        <input type="text" placeholder="telefone" formControlName="telefone" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.telefone.errors }" />
+                        <div *ngIf="submitted && f.telefone.errors" class="invalid-feedback">
+                            <div *ngIf="f.telefone.errors.required">Insira um telefone válido</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <input type="text" placeholder="E-mail" formControlName="email" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Insira um e-mail</div>
+                            <div *ngIf="f.email.errors.email">Insira um e-mail válido</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <input type="password" placeholder="Senha" formControlName="senha" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.senha.errors }" />
+                        <div *ngIf="submitted && f.senha.errors" class="invalid-feedback">
+                            <div *ngIf="f.senha.errors.required">Insira uma senha</div>
+                            <div *ngIf="f.senha.errors.minlength">Insira uma combinação de no mínimo 6 caracteres</div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- aqui terminava o primeiro form </form> -->
+
+        </div>
+
+        <div class="col-md-6">
+            <!-- aqui começava o segundo form <form> -->
+
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="cep" class="form-title-label">Endereço</label>
+                        <input type="text" placeholder="cidade" formControlName="cidade" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.cidade.errors }" />
+                        <div *ngIf="submitted && f.cidade.errors" class="invalid-feedback">
+                            <div *ngIf="f.cidade.errors.required">Insira uma cidade</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-8 mb-3">
+                        <input type="text" placeholder="Logradouro" formControlName="Logradouro" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.logradouro.errors }" />
+                        <div *ngIf="submitted && f.logradouro.errors" class="invalid-feedback">
+                            <div *ngIf="f.logradouro.errors.required">Insira um logradouro</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="number" placeholder="Número" formControlName="numero" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.numero.errors }" />
+                        <div *ngIf="submitted && f.numero.errors" class="invalid-feedback">
+                            <div *ngIf="f.numero.errors.required">Insira o número</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-8 mb-3">
+                        <input type="text" placeholder="Bairro" formControlName="bairro" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.bairro.errors }" />
+                        <div *ngIf="submitted && f.bairro.errors" class="invalid-feedback">
+                            <div *ngIf="f.bairro.errors.required">Insira um bairro</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text" placeholder="CEP" formControlName="cep" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.cep.errors }" />
+                        <div *ngIf="submitted && f.cep.errors" class="invalid-feedback">
+                            <div *ngIf="f.cep.errors.required">Insira um cep</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <!-- <input type="text" [(ngModel)]="cliente.complemento" name="complemento" class="form-control"
+                            id="complemento" placeholder="Complemento" required> -->
+                        <input type="text" placeholder="Complemento" formControlName="complemento" class="form-control"
+                            />
+                    </div>
+                </div>
+
+            <!-- aqui terminava o segundo form </form> -->
+
+        </div>
+    </form>
+
+        <div class="col-md-3"></div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4">
+            <div class="text-center"><button class="btn btn-roxo btn-primary btn-block" type="submit"
+                    (click)="cadastrar()">Cadastrar</button></div>
+            <br>
+            <a [routerLink]="['/login']" class="btn-link">Já tem uma conta? Faça login</a>
+        </div>
+
+        <div class="col-md-4"></div>
+    </div>
+    <!-- </div> -->
+
+</div>

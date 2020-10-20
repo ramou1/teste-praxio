@@ -14,18 +14,30 @@
         <div class="col-md-4">
 
             <h1>Entrar</h1>
-            <form>
+            <form ngNoForm [formGroup]="form" (ngSubmit)="logIn()">
                 <div class="form-row">
                     <div class="col-md-12 mb-3">
-                        <input type="email" [(ngModel)]="usuario.email" name="email" class="form-control" id="email"
-                            placeholder="E-mail" required>
+                        <!-- <input type="email" [(ngModel)]="usuario.email" name="email" class="form-control" id="email"
+                            placeholder="E-mail" required> -->
+
+                        <input type="text" placeholder="E-mail" formControlName="email" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Insira um e-mail</div>
+                            <div *ngIf="f.email.errors.email">Insira um e-mail válido</div>
+                        </div>
+
                     </div>
                     <div class="col-md-12 mb-3">
-                        <input type="password" [(ngModel)]="usuario.senha" name="senha" class="form-control" id="senha"
+                        <!-- <input type="password" [(ngModel)]="usuario.senha" name="senha" class="form-control" id="senha"
                             placeholder="Senha" required>
-                        <a class="forgot">Esqueceu a senha?</a>
+                        <a class="forgot">Esqueceu a senha?</a> -->
+                        <input type="password" placeholder="Senha" formControlName="senha" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.senha.errors }" />
+                        <div *ngIf="submitted && f.senha.errors" class="invalid-feedback">
+                            <div *ngIf="f.senha.errors.required">Insira uma senha válida</div>
+                        </div>
                     </div>
-
                 </div>
             </form>
 
