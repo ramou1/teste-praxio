@@ -15,6 +15,6 @@ Desenvolvido na versão 10.0.4 do Angular.
 :x: Uso da API
 
 ## + info
-:triangular_flag_on_post: Acréscimo da área opcional de Complemento na página de Cadastro
-:triangular_flag_on_post: Efeito em botões ao passar o mouse
-:triangular_flag_on_post: Utilização do Framework Bootstrap
+:white_check_mark: Acréscimo da área opcional de Complemento na página de Cadastro<br />
+:white_check_mark: Efeito em botões ao passar o mouse<br />
+:white_check_mark: Utilização do Framework Bootstrap
