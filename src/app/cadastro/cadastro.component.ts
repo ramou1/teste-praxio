@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -12,12 +12,11 @@ export class CadastroComponent implements OnInit {
   // cliente: any = { nome: '', cpf: '', telefone: '', email: '', senha: '', cidade: '', logradouro: '', numero: '', bairro: '', cep: '', complemento: '' };
   submitted: boolean = false;
   form: FormGroup;
-  formBuilder: any;
 
-  constructor(public api: ApiService) { }
+  constructor(public api: ApiService, private FormBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
+    this.form = this.FormBuilder.group({
       nome: ['', Validators.required],
       cpf: ['', Validators.required, Validators.minLength(9)],
       telefone: ['', Validators.required, Validators.pattern("[0-9 ]{12}")],

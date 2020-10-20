@@ -19,11 +19,9 @@
     <div class="row">
         <div class="col-md-3"></div>
 
-
         <div class="col-md-6">
             <form ngNoForm [formGroup]="form" (ngSubmit)="cadastrar()">
 
-            <!-- aqui começava o primeiro form <form> -->
             <div class="form-row">
                 <div class="col-md-6 mb-3">
                     <label for="nome" class="form-title-label">Informações Pessoais</label>
@@ -39,7 +37,7 @@
 
                 <div class="col-md-6 mb-3">
                     <label for="cep" class="form-title-label">Endereço</label>
-                    <input type="text" placeholder="cidade" formControlName="cidade" class="form-control"
+                    <input type="text" placeholder="Cidade" formControlName="cidade" class="form-control"
                         [ngClass]="{ 'is-invalid': submitted && f.cidade.errors }" />
                     <div *ngIf="submitted && f.cidade.errors" class="invalid-feedback">
                         <div *ngIf="f.cidade.errors.required">Insira uma cidade</div>
@@ -61,7 +59,7 @@
                 <div class="col-md-3 mb-3">
                     <!-- <input type="number" [(ngModel)]="cliente.telefone" name="telefone" class="form-control" id="telefone"
                             placeholder="Telefone" required> -->
-                    <input type="text" placeholder="telefone" formControlName="telefone" class="form-control"
+                    <input type="text" placeholder="Telefone" formControlName="telefone" class="form-control"
                         [ngClass]="{ 'is-invalid': submitted && f.telefone.errors }" />
                     <div *ngIf="submitted && f.telefone.errors" class="invalid-feedback">
                         <div *ngIf="f.telefone.errors.required">Insira um telefone válido</div>
@@ -85,7 +83,7 @@
             </div>
 
             <div class="form-row">
-                <div class="col-md-12 mb-3">
+                <div class="col-md-6 mb-3">
                     <input type="text" placeholder="E-mail" formControlName="email" class="form-control"
                         [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
@@ -93,10 +91,26 @@
                         <div *ngIf="f.email.errors.email">Insira um e-mail válido</div>
                     </div>
                 </div>
+
+                <div class="col-md-4 mb-3">
+                    <input type="text" placeholder="Bairro" formControlName="bairro" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.bairro.errors }" />
+                    <div *ngIf="submitted && f.bairro.errors" class="invalid-feedback">
+                        <div *ngIf="f.bairro.errors.required">Insira um bairro</div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <input type="text" placeholder="CEP" formControlName="cep" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.cep.errors }" />
+                    <div *ngIf="submitted && f.cep.errors" class="invalid-feedback">
+                        <div *ngIf="f.cep.errors.required">Insira um cep</div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="form-row">
-                <div class="col-md-12 mb-3">
+                <div class="col-md-6 mb-3">
                     <input type="password" placeholder="Senha" formControlName="senha" class="form-control"
                         [ngClass]="{ 'is-invalid': submitted && f.senha.errors }" />
                     <div *ngIf="submitted && f.senha.errors" class="invalid-feedback">
@@ -104,27 +118,8 @@
                         <div *ngIf="f.senha.errors.minlength">Insira uma combinação de no mínimo 6 caracteres</div>
                     </div>
                 </div>
-            </div>
 
-            <div class="form-row">
-                <div class="col-md-8 mb-3">
-                    <input type="text" placeholder="Bairro" formControlName="bairro" class="form-control"
-                        [ngClass]="{ 'is-invalid': submitted && f.bairro.errors }" />
-                    <div *ngIf="submitted && f.bairro.errors" class="invalid-feedback">
-                        <div *ngIf="f.bairro.errors.required">Insira um bairro</div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <input type="text" placeholder="CEP" formControlName="cep" class="form-control"
-                        [ngClass]="{ 'is-invalid': submitted && f.cep.errors }" />
-                    <div *ngIf="submitted && f.cep.errors" class="invalid-feedback">
-                        <div *ngIf="f.cep.errors.required">Insira um cep</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="col-md-12 mb-3">
+                <div class="col-md-6 mb-3">
                     <!-- <input type="text" [(ngModel)]="cliente.complemento" name="complemento" class="form-control"
                             id="complemento" placeholder="Complemento" required> -->
                     <input type="text" placeholder="Complemento" formControlName="complemento" class="form-control" />
