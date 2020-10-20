@@ -9,6 +9,8 @@
 
 .card {
     border: none;
+    border-radius: 25px;
+    padding: 40px;
 }
 
 .card-title {
@@ -40,4 +42,42 @@
 
 .card-meio {
     z-index: 1000;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+}
+
+.btn01 {
+    background-color: transparent !important;
+    border-width: 2px;
+    border-color: #EAEAEC; 
+    padding: 8px 35px;
+    color: #585859;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.btn01:hover {
+    background-color: #733FFF !important;
+    border-color: #733FFF; 
+    color: #fff;
+}
+
+.btn02 {
+    background-color: #733FFF !important;
+    border-width: 2px;
+    border-color: #733FFF !important; 
+    padding: 8px 35px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.btn02:hover {
+    background-color: transparent !important;
+    color: #733FFF;
 }
